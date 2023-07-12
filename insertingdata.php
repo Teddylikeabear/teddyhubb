@@ -1,4 +1,5 @@
 <?php
+/*
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -35,5 +36,5 @@ if ($conn->multi_query($sql)=== TRUE){
 
 
 $conn->close();
-
+*/
 ?>
