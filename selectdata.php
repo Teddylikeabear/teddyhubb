@@ -16,14 +16,18 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT empid, initials, lastname FROM employees";
+$sql = "SELECT empid, initials, lastname FROM employees WHERE lastname='Morakabi'";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
+    
     // output data of each row
     while($row = $result->fetch_assoc()) {
         echo "<br> Employee id: ". $row["empid"]. " - Name: ". $row["initials"]. " " . $row["lastname"] . "<br>";
+         
     }
+  
+
 } else {
     echo "0 results";
 }
