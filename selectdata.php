@@ -38,7 +38,7 @@ if ($result->num_rows > 0) {
   
 } else {
     echo "0 results";
-}*/
+}
 
 //delete record
 
@@ -48,7 +48,17 @@ if (mysqli_query($conn, $sql)) {
   } else {
     echo "Error deleting record: " . mysqli_error($conn);
   }
+*/
 
+$sql = "UPDATE employees SET lastname='Madzaga' WHERE empid=994";
+
+if ($conn->query($sql) === TRUE) {
+  echo "Record updated successfully";
+} else {
+  echo "Error updating record: " . $conn->error;
+}
+
+//$sql = "SELECT * FROM Orders LIMIT 4"; 
 
 $conn->close();
 ?>
