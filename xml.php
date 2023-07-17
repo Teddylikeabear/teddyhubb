@@ -19,7 +19,7 @@ print_r($xml);
 */
 
 //error handling 
-libxml_use_internal_errors(true);
+/*libxml_use_internal_errors(true);
 $myXMLData =
 "<?xml version='1.0' encoding='UTF-8'?>
 <document>
@@ -35,8 +35,41 @@ if ($xml === false) {
   }
 } else {
   print_r($xml);
+}*/
+
+//Initialize the XML parser
+$parser=xml_parser_create();
+
+//Function to use at the start of an element
+function start($parser,$element_name,$element_attrs) {
+    switch($element_name) {
+        case "NOTE":
+        echo "-- Note --<br>";
+    break;
+        case "TO":
+        echo "To: ";
+    break;
+        case "FROM":
+        echo "From: ";
+    break;
+        case "HEADING":
+        echo "Heading: ";
+    break;
+        case "BODY":
+        echo "Message: ";
+    }
 }
 
+
+//Function to use at the end of an element
+function stop($parser,$element_name) {
+    echo "<br>";
+}
+
+//Function to use when finding character data
+function char($parser,$data) {
+    echo $data;
+}
 ?>
 
 </body>
