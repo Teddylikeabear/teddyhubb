@@ -35,7 +35,7 @@ if ($xml === false) {
   }
 } else {
   print_r($xml);
-}*/
+}
 
 //Initialize the XML parser
 $parser=xml_parser_create();
@@ -90,6 +90,20 @@ while ($data=fread($fp,4096)) {
 
 // Free the XML parser
 xml_parser_free($parser);
+*/
+
+$xmlDoc = new DOMDocument();
+$xmlDoc->load("note.xml");
+
+print $xmlDoc->saveXML();
+
+$xmlDoc = new DOMDocument();
+$xmlDoc->load("note.xml");
+
+$x = $xmlDoc->documentElement;
+foreach ($x->childNodes AS $item) {
+  print $item->nodeName . " = " . $item->nodeValue . "<br>";
+}
 ?>
 
 </body>
