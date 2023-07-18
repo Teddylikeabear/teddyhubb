@@ -22,12 +22,21 @@ function showHint(str) {
 </head>
 <body>
 
-<p><b>Start typing a name in the input field below:</b></p>
+<p><b>Start typing your details in the fields below:</b></p>
 <form action="">
   <label for="fname">First name:</label>
   <input type="text" id="fname" name="fname" onkeyup="showHint(this.value)">
+  <br><label for="surname">Surname:</label> 
+  <input type="text" id="surname" name="surname" onkeyup="showHint(this.value)">
+  <br><label for="email">Email:</label> 
+  <input type="text" id="email" name="email" onkeyup="showHint(this.value)">
+  <br><label for="intplc">Intern placement:</label> 
+  <input type="text" id="intplc" name="intplc" onkeyup="showHint(this.value)">
+  
 </form>
 <p>Suggestions: <span id="txtHint"></span></p>
+<input type="text" id="suggestion" name="suggestion" onkeyup="showHint(this.value)">
+
 
 </body>
 </html>
