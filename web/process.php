@@ -4,7 +4,7 @@
     <title> Result</title>
 </head>
 <body>
-    <h2> Result</h2>
+    <h2> Form Output</h2>
     <?php
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $name = $_POST['name'];

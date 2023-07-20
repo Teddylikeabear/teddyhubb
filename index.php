@@ -46,14 +46,9 @@ final class Index{
   const DEFAULT_PAGE = 'home';
   
   private static $CLASS = [
-    'Db' => '/model/model.php', 
-    'UserDao' => '/model/model.php',
-    'ProductDao' => '/model/model.php',
-    'User' => '/view/view.php',
-    'Product' => '/view/view.php',
-    'NotFoundException' => 'index.php',
-    'Helper'=>'/view/view.php',
-    'Cart'=>'/view/view.php'
+    'car' => '/model/model.php', 
+    'NotFoundException' => 'index.php'
+   
   ];
 
     /**
