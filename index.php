@@ -46,9 +46,9 @@ final class Index{
   const DEFAULT_PAGE = 'home';
   
   private static $CLASS = [
-    'car' => '/model/model.php', 
-    'NotFoundException' => 'index.php'
-   
+    //'processor' => '/model/model.php', 
+    'NotFoundException' => 'index.php',
+   'Helper' =>'/model/model.php'
   ];
 
     /**
@@ -75,10 +75,12 @@ final class Index{
      */
   public function loadClass($name){
     if (!array_key_exists($name, self::$CLASS)) {
-        die('Class "' . $name . '" not found.');
+       // die('Class "' . $name . '" not found.');
+       throw new Exception('Class "' .name.'" not found.');
     }
     require_once __DIR__.self::$CLASS[$name];
   }
+
 
   /**
     * Exception handler.
