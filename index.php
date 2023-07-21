@@ -43,7 +43,7 @@ final class Index{
   const LAYOUT_DIR = '/layout/';
   const PAGE_DIR = '/web/';
   const LAYOUT_PAGE='index.phtml';
-  const DEFAULT_PAGE = 'home';
+  const DEFAULT_PAGE = 'formfile';
   
   private static $CLASS = [
     //'processor' => '/model/model.php', 

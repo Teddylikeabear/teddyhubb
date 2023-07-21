@@ -1,4 +1,3 @@
-<!--
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,7 +6,7 @@
 <body>
     <h2> Form Output</h2>
     <?php
-    /*
+    
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $name = $_POST['name'];
         $surname = $_POST['surname'];
@@ -24,9 +23,7 @@
     } else {
         echo "<p>No data submitted.</p>";
     }
-    */
+    
     ?>
 </body>
 </html>
-
--->
