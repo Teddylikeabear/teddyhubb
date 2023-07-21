@@ -126,8 +126,79 @@ public function register( array $processsor)
         public static function escape($string) {
             return htmlspecialchars($string, ENT_QUOTES);
         }
-    }
+    };
     
-    
+    final class User{
 
+        private $name;
+        private $surname;
+        private $email;
+        private $placement;
+        private $institution;
+    
+        function __construct(){
+    
+        }
+    
+        public function setParam(stdClass $user){
+    
+    
+            if(array_key_exists('name', $user)){
+                $this->name = $user->name;
+            }
+    
+            if(array_key_exists('surname', $user)){
+                $this->surname = $user->surname;
+            }
+    
+            if(array_key_exists('email', $user)){
+                $this->emai = $user->emai;
+            }
+
+            if(array_key_exists('placement', $user)){
+                $this->placement = $user->placement;
+            }
+
+            if(array_key_exists('institution', $user)){
+                $this->institution = $user->institution;
+            }
+        }
+    
+    
+    };
+
+    final class ValidatorError {
+
+        private $source;
+        private $message;
+    
+        /**
+         * Create new validation error.
+         * @param mixed $source source of the error
+         * @param string $message error message
+         */
+        function __construct($source, $message) {
+            $this->source = $source;
+            $this->message = $message;
+        }
+    
+        /**
+         * Get source of the error.
+         * @return mixed source of the error
+         */
+        public function getSource() {
+            return $this->source;
+        }
+    
+        /**
+         * Get error message.
+         * @return string error message
+         */
+        public function getMessage() {
+            return $this->message;
+        }
+    };
+
+
+    
 ?>
