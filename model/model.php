@@ -152,7 +152,7 @@ public function register( array $processsor)
             }
     
             if(array_key_exists('email', $user)){
-                $this->emai = $user->emai;
+                $this->email = $user->email;
             }
 
             if(array_key_exists('placement', $user)){

@@ -46,9 +46,10 @@ final class Index{
   const DEFAULT_PAGE = 'formfile';
   
   private static $CLASS = [
-    //'processor' => '/model/model.php', 
+    'processor' => '/model/model.php', 
     'NotFoundException' => 'index.php',
-   'Helper' =>'/model/model.php'
+   'Helper' =>'/model/model.php',
+   'user'=> '/model/model.php'
   ];
 
     /**
