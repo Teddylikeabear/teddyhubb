@@ -74,6 +74,18 @@ try{
     return $this -> checkPage($page)
    }
 
+   private function chechPage($page){
+    if (!preg_match('/^[a-z0-9-]+$/i',$page)){
+        //TODO LOG ATTEMPT , REDIRECT ATTACHER
+        die('Unsafe page "'.$page . '" requested');
+    }
+    if (!$this -> hasScript($page)&& !$this -> hasTemplate($page)){
+        //TODO LOG ATTEMPTT , REDIRECT ATTACKER
+        die('Page "' .$page . '" not found ');
+    }
+    return $page;
+   }
+
 }
 
 ?>
