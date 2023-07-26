@@ -15,7 +15,7 @@ final class Index{
 
   const LAYOUT_DIR = '/layout/';
   const PAGE_DIR = '/web/';
-  const LAYOUT_PAGE='index.phtml';
+  const LAYOUT_PAGE='index.php';
   const DEFAULT_PAGE = 'formfile';
   
   private static $CLASS = [
@@ -63,7 +63,7 @@ final class Index{
     $extra = ['message' => $ex->getMessage()];
     if ($ex instanceof NotFoundException) {
         header('HTTP/1.0 404 Not Found');
-        $this->runPage('404', $extra);
+        $this->runPage('pg404', $extra);
     } else {
         // TODO log exception
         header('HTTP/1.1 500 Internal Server Error');
@@ -92,7 +92,9 @@ final class Index{
       if (!$run) {
         throw new NotFoundException('Page "' . $page . '" has neither script nor template!');
       }
+      
   }
+  
 
   /**
    * 
