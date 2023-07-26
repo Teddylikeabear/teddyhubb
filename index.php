@@ -14,9 +14,10 @@ final class Index{
     private static $CLASS = [
         'processor'=> '/model/model.php',
         'NotFoundException' => 'index.php',
-        'helper'=>'/model/model.php',
+        'helper'=>'/model/model.php'
 
     ];
+
     function__constuct(){
         //ERROR REPORTING DEVELOPMENT
         error_reporting(E_ALL | E_STRICT);
@@ -41,8 +42,25 @@ try{
             die('Class"'. $name .'" not found .');
 
         }
-        require_once__DIR__.self :: $CLASS
+        require_once__DIR__.self :: $CLASS[$name];
     }
+
+   private function runPage($page, array $extra = []){
+
+    $run = false;
+    if ($this -> hasScript($page)){
+        $run = true;
+        require $this->getScript($page);
+    }
+    if ($this-> hasTemplate($page)){
+        $run = true;
+        //data from main template 
+        $template = $this -> getTemplate ($page);
+        //main template (layout)
+        require__DIR__.self::LAYOUT_DIR.self::LAYOUT_PAGE;
+    }
+    if (!$run)
+   }
  
 
 }
