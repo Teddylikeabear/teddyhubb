@@ -23,8 +23,13 @@
         <label for="Institution">Institution:</label>
         <input type="institution" id="institution" name="institution" required><br> 
 
-        <input type="submit" value="Submit">
-        <a href="/process.phtml"></a>
+        <a href = "process"></a>
+
+        <?php
+        echo '<form method ="POST" action = "process">
+        <input type="submit"/>
+        </form>';
+        ?>
     </form>
 </body>
 </html>

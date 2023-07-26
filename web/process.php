@@ -1,4 +1,4 @@
-<!--<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <title> Result</title>
@@ -7,7 +7,7 @@
     <h2> Form Output</h2>
     <?php
     
-   /* if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $name = $_POST['name'];
         $surname = $_POST['surname'];
         $email = $_POST['email'];
@@ -23,8 +23,8 @@
     } else {
         echo "<p>No data submitted.</p>";
     }
-    */
-
+    
+/*
       // formfile template setup
       $view = [
         'submit'
@@ -75,7 +75,7 @@ if( array_key_exists('submit', $_POST)){
 }
 
 }
+*/
     ?>
 </body>
 </html>
--->

@@ -74,6 +74,8 @@ public function register( array $processsor)
     return $errors;
 
 }}
+
+
     final class Helper{ 	
 
         /**
@@ -127,6 +129,7 @@ public function register( array $processsor)
             return htmlspecialchars($string, ENT_QUOTES);
         }
     };
+    
     
     final class User{
 
@@ -198,6 +201,7 @@ public function register( array $processsor)
             return $this->message;
         }
     };
+    
 
 
     

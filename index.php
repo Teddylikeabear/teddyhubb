@@ -1,33 +1,6 @@
 <?php
-/**
- * Controller Class Api & access point
- * 
- * @category    Controller
- * @package     FirstTest
- * @author      RamakhanyaD <techcodehive@gmail.com>
- * @license     openSource 
- * @link        https://revtech.co.za
- */
 
-/*
-    require "user.php";
 
-    $user = new user();
-
-    var_dump($user->selectProperties('mike@example.com'));
-
-    echo '-----------------------------';
-
-    $play = $user->selectProperties('mike@example.com');
-
-    foreach( $play as $playr):
-
-      if(array_key_exists('name', $playr)){
-        echo $playr->name." \n";
-      }
-
-    endforeach;
-*/
 
 /**
  * Exception which causes HTTP ERROR 404 (Not Found).
@@ -135,10 +108,11 @@ final class Index{
   /**
    * 
    */
-  private function checkPage($page) {
+ private function checkPage($page) {
       if (!preg_match('/^[a-z0-9-]+$/i', $page)) {
         // TODO log attempt, redirect attacker, ...
-        throw new NotFoundException('Unsafe page "' . $page . '" requested');
+       throw new NotFoundException('Unsafe page "' . $page . '" requested');
+     
       }
       if (!$this->hasScript($page)
           && !$this->hasTemplate($page)) {
@@ -159,7 +133,7 @@ final class Index{
    * 
    */
   private function getScript($page) {
-    return __DIR__.self::PAGE_DIR.$page.'.php';
+    return __DIR__.self::PAGE_DIR.$page.'';
   }
 
   /**
@@ -173,7 +147,7 @@ final class Index{
    * 
    */
   private function getTemplate($page) {
-      return __DIR__.self::PAGE_DIR.$page.'.phtml';
+      return __DIR__.self::PAGE_DIR.$page.'';
   }
 
   /**
