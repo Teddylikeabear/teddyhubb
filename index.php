@@ -59,9 +59,20 @@ try{
         //main template (layout)
         require__DIR__.self::LAYOUT_DIR.self::LAYOUT_PAGE;
     }
-    if (!$run)
+    if (!$run){
+        die('Page "'.$page . '"has neither script nor template ! ');
+
+    }
+
    }
  
+   private function getPage(){
+    $page = self :: DEFAULT_PAGE;
+    if (array_key_exists('page',$_GET)){
+        $page = $_GET['page'];
+    }
+    return $this -> checkPage($page)
+   }
 
 }
 
