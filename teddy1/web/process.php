@@ -2,13 +2,13 @@
 
 $user = new Processor;
 
-if ($_SERVER[ 'REQUEST_METHOD'] === 'GET')
+if ($_SERVER[ 'REQUEST_METHOD'] === 'POST')
 {
-    $user_name = $_GET["name"];
-    $user_surname = $_GET["surname"];
-    $user_email = $_GET["email"];
-    $user_placement = $_GET["placement"];
-    $user_institution = $_GET["institution"];
+    $user_name = $_POST["name"];
+    $user_surname = $_POST["surname"];
+    $user_email = $_POST["email"];
+    $user_placement = $_POST["placement"];
+    $user_institution = $_POST["institution"];
 
 $user -> set_name ("$user_name");
 $user -> set_surname ("$user_surname");

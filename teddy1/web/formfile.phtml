@@ -6,7 +6,7 @@
 </head>
 <body>
     <h2>Home page </h2>
-    <form action="process" method="post">
+    <form action="process" method="POST">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required><br>
 
@@ -23,22 +23,27 @@
         <label for="Institution">Institution:</label>
         <input type="institution" id="institution" name="institution" required><br> 
 
-       <!-- <a href = "process"></a>
-
-        =<output name ="name" ></output>
--->
-
-        <?php
-        /*
-        echo '<form method ="POST" action = "process">
-        <input type="submit"/>
-        </form>';
-        */
-        ?>
-
-
+   
     </form>
 </body>
 </html>
 
+<?php
+        
+        echo '<form method ="POST" action = "process">
+        <input type="submit"/>
+        </form>';
+    
+        if ($_SERVER[ 'REQUEST_METHOD'] === 'GET')
+      {
+        echo "Name :".$user -> get_name() ."<br>"; 
+        echo "Surname :".$user -> get_surname() ."<br>"; 
+        echo "Email:".$user -> get_email() ."<br>"; 
+        echo "Placement :".$user -> get_placement() ."<br>"; 
+        echo "Institution :".$user -> get_institution() ."<br>"; 
 
+
+      }
+
+
+        ?>

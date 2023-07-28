@@ -7,8 +7,9 @@ final class Index{
     const LAYOUT_DIR = '/layout';
     const PAGE_DIR = '/web';
     const LAYOUT_PAGE = 'index.phtml';
-    const DEFAULT_PAGE = 'formfile';
+    const DEFAULT_PAGE = 'index';
 
+    // DECLARE CLASSES
     private static $CLASS = [
         'Processor'=> '/model/model.php',
         'NotFoundException' => 'index.php',
@@ -47,6 +48,23 @@ final class Index{
         }
         require_once__DIR__.self :: $CLASS[$name];
     }
+
+  /**
+    * Exception handler.
+    */
+    public function handleException($ex) {
+      $extra = ['message' => $ex->getMessage()];
+      if ($ex instanceof NotFoundException) {
+          header('HTTP/1.0 404 Not Found');
+          $this->runPage('404', $extra);
+      } else {
+          // TODO log exception
+          header('HTTP/1.1 500 Internal Server Error');
+          $this->runPage('500', $extra);
+      }
+    }
+  
+
 
    private function runPage($page, array $extra = [])
    {
