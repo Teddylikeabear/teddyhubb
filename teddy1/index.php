@@ -110,7 +110,7 @@ final class Index{
    //gets php
    private function getScript($page)
    {
-    return__DIR__.self :: PAGE_DIR.$page.'';
+    return __DIR__.self :: PAGE_DIR.$page.'';
    }
 
    //checks phtml
@@ -122,7 +122,7 @@ final class Index{
    //gets phtml 
    private function getTemplate($page)
    {
-    return__DIR__.self ::PAGE_DIR.$page.'';
+    return __DIR__.self ::PAGE_DIR.$page.'';
    }
 
    //RUN APPLICATION
