@@ -149,9 +149,17 @@ final class Index{
    {
     $this -> runPage($this -> getPage());
    }
+
+   public function testDir(){
+    
+    echo 'Has script is '. $this->hasScript(self::DEFAULT_PAGE);
+
+    echo '<br /> Has template is '. $this->hasTemplate(self::DEFAULT_PAGE);
+   }
 }
 
 $index = new Index();
-$index ->run();
+//$index ->run();
 
+$index ->testDir();
 ?>
