@@ -155,7 +155,7 @@ final class Index{
     if(!$this->hasScript(self::DEFAULT_PAGE))
     {echo 'Has script is ';}
 
-    if($this->hasTemplate(self::DEFAULT_PAGE);){
+    if($this->hasTemplate(self::DEFAULT_PAGE)){
       echo '<br /> Has template is ';}
 
       echo " <br />Both directory listings failed";
