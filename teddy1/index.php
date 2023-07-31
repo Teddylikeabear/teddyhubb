@@ -156,7 +156,7 @@ final class Index{
     {echo 'Has script is ';}
 
     if($this->hasTemplate(self::DEFAULT_PAGE);){
-      echo '<br /> Has template is '}
+      echo '<br /> Has template is ';}
    }
 }
 
