@@ -152,11 +152,13 @@ final class Index{
 
    public function testDir(){
     
-    if($this->hasScript(self::DEFAULT_PAGE))
+    if(!$this->hasScript(self::DEFAULT_PAGE))
     {echo 'Has script is ';}
 
     if($this->hasTemplate(self::DEFAULT_PAGE);){
       echo '<br /> Has template is ';}
+
+      echo " <br />Both directory listings failed";
    }
 }
 
