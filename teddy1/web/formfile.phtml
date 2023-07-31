@@ -34,7 +34,7 @@
         <input type="submit"/>
         </form>';
     
-        if ($_SERVER[ 'REQUEST_METHOD'] === 'GET')
+        if ($_SERVER[ 'REQUEST_METHOD'] === 'POST')
       {
         echo "Name :".$user -> get_name() ."<br>"; 
         echo "Surname :".$user -> get_surname() ."<br>"; 

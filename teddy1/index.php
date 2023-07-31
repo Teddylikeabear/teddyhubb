@@ -7,7 +7,7 @@ final class Index{
     const LAYOUT_DIR = '/layout';
     const PAGE_DIR = '/web';
     const LAYOUT_PAGE = 'index.phtml';
-    const DEFAULT_PAGE = 'index';
+    const DEFAULT_PAGE = 'formfile';
 
     // DECLARE CLASSES
     private static $CLASS = [

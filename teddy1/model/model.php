@@ -7,7 +7,60 @@ private $email;
 private $placement;
 private $institution;
 
-function __construct(){} 
+function set_name($name)
+{
+    $this -> name = $name;
+}
+
+function get_name()
+{
+    return $this->name;
+}
+
+function set_surname($surname)
+{
+    $this -> surname = $surname;
+}
+
+function get_surname()
+{
+    return $this->surname;
+}
+
+function set_email($email)
+{
+    $this -> email = $email;
+}
+
+function get_email()
+{
+    return $this->email;
+}
+
+function set_placement($placement)
+{
+    $this -> placement = $placement;
+}
+
+function get_placement()
+{
+    return $this->placement;
+}
+
+function set_institution($institution)
+{
+    $this -> institution = $institution;
+}
+
+function get_institution()
+{
+    return $this->institution;
+}
+
+}
+
+
+/*function __construct(){} 
 
 public function setParam(stdClass $processor){
 
@@ -31,6 +84,8 @@ public function setParam(stdClass $processor){
         $this->institution = $processsor->institution;
     }
 }
+
+
 
 public function register( array $processsor)
 {
@@ -74,6 +129,8 @@ public function register( array $processsor)
     return $errors;
 
 }}
+
+*/
 
 
     final class Helper{ 	
@@ -130,7 +187,7 @@ public function register( array $processsor)
         }
     };
     
-    
+    /*
     final class User{
 
         private $name;
@@ -169,39 +226,39 @@ public function register( array $processsor)
     
     
     };
-
-    final class ValidatorError {
+*/
+   /* final class ValidatorError {
 
         private $source;
         private $message;
-    
+    */
         /**
          * Create new validation error.
          * @param mixed $source source of the error
          * @param string $message error message
          */
-        function __construct($source, $message) {
+       /* function __construct($source, $message) {
             $this->source = $source;
             $this->message = $message;
         }
-    
+    */
         /**
          * Get source of the error.
          * @return mixed source of the error
          */
-        public function getSource() {
+       /* public function getSource() {
             return $this->source;
         }
-    
+    */
         /**
          * Get error message.
          * @return string error message
          */
-        public function getMessage() {
+       /* public function getMessage() {
             return $this->message;
         }
     };
-    
+    */
 
 
     
