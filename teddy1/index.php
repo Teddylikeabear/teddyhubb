@@ -152,9 +152,11 @@ final class Index{
 
    public function testDir(){
     
-    echo 'Has script is '. $this->hasScript(self::DEFAULT_PAGE);
+    if($this->hasScript(self::DEFAULT_PAGE))
+    {echo 'Has script is ';}
 
-    echo '<br /> Has template is '. $this->hasTemplate(self::DEFAULT_PAGE);
+    if($this->hasTemplate(self::DEFAULT_PAGE);){
+      echo '<br /> Has template is ';}
    }
 }
 
