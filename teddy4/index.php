@@ -47,7 +47,7 @@ final class Index{
   
   private static $CLASS = [
     'NotFoundException' => 'index.php',
-    'Helper'=>'/view/view.php'
+    'Helper'=>'/model/model.php'
     
   ];
 
