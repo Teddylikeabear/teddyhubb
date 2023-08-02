@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <body>
+
+<form >
+    <label for="name">First name:</label>
+    <input type="text" id="name" name="name">
+    <br>
+    <label for="surname">Last name:</label>
+    <input type="text" id="surname" name="surname">
+     <br>
+    <label for="email">Email:</label>
+    <input type="text" id="email" name="email">
+
+    <p>Where did you hear about us:</p>
+
+<input type="radio" id="TIKTOK" name="hear_from" value="TIKTOK">
+ <label for="TIKTOK">TIKTOK</label><br>
+ <input type="radio" id="instagram" name="hear_from" value="instagram">
+ <label for="instagram">INSTAGRAM</label><br>
+ <input type="radio" id="facebook" name="hear_from" value="facebook">
+ <label for="facebook">FACEBOOK</label><br>
+ <input type="radio" id="other" name="hear_from" value="other">
+ <label for="other">OTHER</label>
+
+ <p>What did you like most:</p>
+
+ <input type="checkbox" id="Hoddie" name="Sweater" value="Tshirts">
+ <label for="Hoddie"> I like the hoddie</label>
+ <br>
+ <input type="checkbox" id="Hoddie" name="Sweater" value="Tshirts">
+ <label for="Sweater"> I like the sweater</label>
+ <br>
+ <input type="checkbox" id="Hoddie" name="Sweater" value="Tshirts">
+ <label for="Tshirt"> I like the Tshirt</label>
+ <br><br>
+
+ <label for="other">What other items can we add to our store:</label>
+    <input type="text" id="other" name="other">
+    <br>
+ 
+ Comment: <textarea name="comment" rows="5" cols="40"></textarea>
+ <br><br>
+
+ <input type="submit" value="Submit">
+
+
+
+ <?php
+
+
+echo "<h2>Your Input:</h2>";
+echo $name;
+echo "<br>";
+echo $surname;
+echo "<br>";
+echo $hear_from;
+echo "<br>";
+echo $checkbox;
+echo "<br>";
+echo $comment;
+?>
+
+  </form> 
+</html>
+</body>
+
