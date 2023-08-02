@@ -1,5 +1,7 @@
 <?php
 
+$user = new infinitt;
+
 $name = $email = $hear_from =$checkbox= "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST")
@@ -21,7 +23,16 @@ $user -> set_checkbox ("$user_checkbox");
   echo "Like:".$user -> get_checkbox() ."<br>"; 
 
 
- } 
+ }
+/*
+function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
+
+   */       
 
 
   ?>

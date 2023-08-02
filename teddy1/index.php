@@ -149,7 +149,7 @@ final class Index{
    {
     $this -> runPage($this -> getPage());
    }
-
+/*
    public function testDir(){
     
     if(!$this->hasScript(self::DEFAULT_PAGE))
@@ -160,10 +160,12 @@ final class Index{
 
       echo " <br />Both directory listings failed";
    }
+   */
 }
 
 $index = new Index();
 //$index ->run();
 
-$index ->testDir();
+//$index ->testDir();
+
 ?>

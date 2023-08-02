@@ -5,6 +5,8 @@
     <title> Welcome Page</title>
 </head>
 <body>
+
+
     <h2>Home page </h2>
     <form action="process" method="POST">
         <label for="name">Name:</label>
@@ -23,16 +25,17 @@
         <label for="Institution">Institution:</label>
         <input type="institution" id="institution" name="institution" required><br> 
 
-   
+       
     </form>
-</body>
-</html>
 
-<?php
-        
+    <?php
+         include 'formfile.php';
+
         echo '<form method ="POST" action = "process">
         <input type="submit"/>
         </form>';
+
+        //require(" formfile.php ");
     
         if ($_SERVER[ 'REQUEST_METHOD'] === 'POST')
       {
@@ -47,3 +50,8 @@
 
 
         ?>
+
+</body>
+</html>
+
+
