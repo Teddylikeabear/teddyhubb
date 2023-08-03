@@ -1,0 +1,31 @@
+<?php
+
+function error_field($title , array $error)
+{
+     foreach ($error as $error)
+     {
+        //@var $error validator
+        if ($server -> getSource () == $title)
+        {
+            return ' style = "background-color :purple;"';
+        }
+     }
+     return '';
+}
+
+?>
+
+<div class = "col-md-8 offset- lg-0">
+    <h1 class = "text-center">YOU ARE WELCOME</h1>
+    <hr>
+
+    <div class="col-10 col-md-6 offset-md-3">
+        <?php
+            if (!empty($errors)) :
+        ?>
+
+        <ul 
+
+</div>
+
+
