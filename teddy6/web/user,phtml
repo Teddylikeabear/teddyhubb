@@ -24,7 +24,26 @@ function error_field($title , array $error)
             if (!empty($errors)) :
         ?>
 
-        <ul 
+        <ul class = "errors">
+            <?php // @var validation error ?>
+            <li><?php
+            echo Helper :: escape ($error -> getMessage())?></li>
+            <?php 
+            endforeach; 
+            ?>
+            <ul>
+    
+            <?php
+            endif;
+            ?>
+
+            <form target="-_self" method = "post">
+                <?php
+                if($action === 'register' || $$action === 'forgot') :
+                    ?>
+
+                    
+
 
 </div>
 
