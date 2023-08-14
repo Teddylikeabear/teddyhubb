@@ -1,0 +1,42 @@
+
+Python is a programming language with objects, modules, threads, exceptions, and automatic memory management.
+
+benefits of using python
+The benefits of pythons are that it is simple and easy, portable, extensible, build-in data structure, and it is open-source.
+The language is easy to use and can be implemented across a variety of technical processes, such as programming, machine learning, data science, automation and more.
+
+Easy to code
+It is easy to learn , but the packages and modules take time to master  
+Python code is easy to read and doesn’t use a lot of brackets and semicolons like other languages 
+It runs line by line and there is no need to compile because it is processed at runtime by an interpreter 
+It has a simple syntax that mimics natural language, so it’s easier to read and understand. This makes it quicker to build projects, and faster to improve on them.
+It’s versatile. Python can be used for many different tasks, from web development to machine learning.
+It’s beginner friendly, making it popular for entry-level coders.
+It’s open source, which means it’s free to use and distribute, even for commercial purposes.
+the standard Python development environment enables access to the Python interactive mode through the Python shell window.
+Users can also use Python IDLE to create or edit existing Python source files by leveraging the file editor.
+PythonLauncher lets developers run Python scripts from the desktop. 
+Simply select PythonLauncher as the default application to open any .py script by double-clicking on it through the Finder window. 
+PythonLauncher offers many options to control how users launch Python scripts.
+
+what i learned
+Python comprises of a huge standard library for most Internet platforms like Email, HTML, etc. 
+Python does not require explicit memory management as the interpreter itself allocates the memory to new variables and free them automatically
+Provide easy readability due to use of square brackets
+Easy-to-learn for beginners
+Having the built-in data types saves programming time and effort from declaring variables
+Python language is an interpreted language. 
+Python program runs directly from the source code. 
+It converts the source code that is written by the programmer into an intermediate language, which is again translated into machine language that has to be executed.
+Python if Statement is used for decision-making operations. 
+It contains a body of code that runs only when the condition given in the if statement is true.
+If the condition is false, then the optional else statement runs, which contains some code for the else condition.
+You can use for loop for even repeating the same statement over and again. 
+
+Things that i want to learn with python
+    Create a videogame with Python
+    Add methods to libraries retroactively with singledispatch
+    Create interactive data science tutorials with Jupyter Notebooks
+    Write tests to verify IT infrastructure state
+    Write both Python and C with Cython
+

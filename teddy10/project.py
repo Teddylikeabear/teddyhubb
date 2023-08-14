@@ -41,7 +41,7 @@ institutionentry.grid(row=4,column=3)
 placemententry.grid(row=5,column=3)
 
 #creating checkbox
-checkbtn = Checkbutton(text ="remeber me?",variable =checkvalue )
+checkbtn = Checkbutton(text ="remeber me?",variable =checkbvalue )
 checkbtn.grid(row=6,column=3)
 
 root.mainloop()
