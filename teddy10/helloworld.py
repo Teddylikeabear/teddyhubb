@@ -46,3 +46,8 @@ days=["Mon","Tues","wed","Thur","Frid","Sat" , "Sun"]
 for d in days :
    if (d=="Thur"):break
    print(d)
+   
+   
+   import math
+   print ("Pie is", math.pi)
+   
