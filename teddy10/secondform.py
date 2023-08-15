@@ -186,3 +186,51 @@ if __name__ == "__main__":
     email_id_field = Entry(root)
     address_field = Entry(root)
     
+     # bind method of widget is used for
+    # the binding the function with the events
+ 
+    # whenever the enter key is pressed
+    # then call the focus1 function
+    name_field.bind("<Return>", focus1)
+ 
+    # whenever the enter key is pressed
+    # then call the focus2 function
+    course_field.bind("<Return>", focus2)
+ 
+    # whenever the enter key is pressed
+    # then call the focus3 function
+    sem_field.bind("<Return>", focus3)
+ 
+    # whenever the enter key is pressed
+    # then call the focus4 function
+    form_no_field.bind("<Return>", focus4)
+ 
+    # whenever the enter key is pressed
+    # then call the focus5 function
+    contact_no_field.bind("<Return>", focus5)
+ 
+    # whenever the enter key is pressed
+    # then call the focus6 function
+    email_id_field.bind("<Return>", focus6)
+    
+    # grid method is used for placing
+    # the widgets at respective positions
+    # in table like structure .
+    name_field.grid(row=1, column=1, ipadx="100")
+    course_field.grid(row=2, column=1, ipadx="100")
+    sem_field.grid(row=3, column=1, ipadx="100")
+    form_no_field.grid(row=4, column=1, ipadx="100")
+    contact_no_field.grid(row=5, column=1, ipadx="100")
+    email_id_field.grid(row=6, column=1, ipadx="100")
+    address_field.grid(row=7, column=1, ipadx="100")
+ 
+    # call excel function
+    excel()
+ 
+    # create a Submit Button and place into the root window
+    submit = Button(root, text="Submit", fg="Black",
+                            bg="Red", command=insert)
+    submit.grid(row=8, column=1)
+ 
+    # start the GUI
+    root.mainloop() 
