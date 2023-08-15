@@ -41,7 +41,9 @@ institutionentry.grid(row=4,column=3)
 placemententry.grid(row=5,column=3)
 
 #creating checkbox
-checkbtn = Checkbutton(text ="remeber me?",variable =checkbvalue )
-checkbtn.grid(row=6,column=3)
+btn = Button(root, text = 'Click me !', bd = '5', command = root.destroy)
 
+# Set the position of button on the top of window.  
+btn.pack(side = 'left')  
+ 
 root.mainloop()
