@@ -95,7 +95,7 @@ def insert():
         address_field.get() == ""):
              
         print("empty input")
-     else:
+    else:
  
         # assigning the max row and max column
         # value upto which data is written
@@ -115,10 +115,74 @@ def insert():
         sheet.cell(row=current_row + 1, column=7).value = address_field.get()
  
         # save the file
-        wb.save('C:\\Users\\Admin\\Desktop\\excel.xlsx')
+        wb.save('C:\\Users\\charm\\OneDrive\\Desktop\\excel.xlsx')
  
         # set focus on the name_field box
         name_field.focus_set()
  
         # call the clear() function
         clear()
+        
+        # Driver code
+if __name__ == "__main__":
+     
+    # create a GUI window
+    root = Tk()
+ 
+    # set the background colour of GUI window
+    root.configure(background='light green')
+ 
+    # set the title of GUI window
+    root.title("registration form")
+ 
+    # set the configuration of GUI window
+    root.geometry("500x300")
+ 
+    excel()
+ 
+    # create a Form label
+    heading = Label(root, text="Form", bg="light green")
+ 
+    # create a Name label
+    name = Label(root, text="Name", bg="light green")
+ 
+    # create a Course label
+    course = Label(root, text="Course", bg="light green")
+ 
+    # create a Semester label
+    sem = Label(root, text="Semester", bg="light green")
+ 
+    # create a Form No. label
+    form_no = Label(root, text="Form No.", bg="light green")
+ 
+    # create a Contact No. label
+    contact_no = Label(root, text="Contact No.", bg="light green")
+    
+     # create a Email id label
+    email_id = Label(root, text="Email id", bg="light green")
+ 
+    # create a address label
+    address = Label(root, text="Address", bg="light green")
+    
+     # grid method is used for placing
+    # the widgets at respective positions
+    # in table like structure .
+    heading.grid(row=0, column=1)
+    name.grid(row=1, column=0)
+    course.grid(row=2, column=0)
+    sem.grid(row=3, column=0)
+    form_no.grid(row=4, column=0)
+    contact_no.grid(row=5, column=0)
+    email_id.grid(row=6, column=0)
+    address.grid(row=7, column=0)
+ 
+    # create a text entry box
+    # for typing the information
+    name_field = Entry(root)
+    course_field = Entry(root)
+    sem_field = Entry(root)
+    form_no_field = Entry(root)
+    contact_no_field = Entry(root)
+    email_id_field = Entry(root)
+    address_field = Entry(root)
+    
