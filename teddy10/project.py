@@ -41,9 +41,9 @@ institutionentry.grid(row=4,column=3)
 placemententry.grid(row=5,column=3)
 
 #creating checkbox
-btn = Button(root, text = 'Click me !', bd = '5', command = root.destroy)
+#btn = Button(root, text = 'Click me !', bd = '50')
 
 # Set the position of button on the top of window.  
-btn.pack(side = 'left')  
+#btn.pack(side = 'left')  
  
 root.mainloop()
