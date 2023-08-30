@@ -130,7 +130,7 @@ if __name__ == "__main__":
     root = Tk()
  
     # set the background colour of GUI window
-    root.configure(background='light green')
+    root.configure(background='purple')
  
     # set the title of GUI window
     root.title("registration form")
@@ -141,28 +141,28 @@ if __name__ == "__main__":
     excel()
  
     # create a Form label
-    heading = Label(root, text="Form", bg="light green")
+    heading = Label(root, text="Form", bg="purple")
  
     # create a Name label
-    name = Label(root, text="Name", bg="light green")
+    name = Label(root, text="Name", bg="purple")
  
     # create a Course label
-    course = Label(root, text="Course", bg="light green")
+    course = Label(root, text="Course", bg="purple")
  
     # create a Semester label
-    sem = Label(root, text="Semester", bg="light green")
+    sem = Label(root, text="Semester", bg="purple")
  
     # create a Form No. label
-    form_no = Label(root, text="Form No.", bg="light green")
+    form_no = Label(root, text="Form No.", bg="purple")
  
     # create a Contact No. label
-    contact_no = Label(root, text="Contact No.", bg="light green")
+    contact_no = Label(root, text="Contact No.", bg="purple")
     
      # create a Email id label
-    email_id = Label(root, text="Email id", bg="light green")
+    email_id = Label(root, text="Email id", bg="purple")
  
     # create a address label
-    address = Label(root, text="Address", bg="light green")
+    address = Label(root, text="Address", bg="purple")
     
      # grid method is used for placing
     # the widgets at respective positions
