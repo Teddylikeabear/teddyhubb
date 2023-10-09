@@ -130,7 +130,7 @@ if __name__ == "__main__":
     root = Tk()
  
     # set the background colour of GUI window
-    root.configure(background='purple')
+    root.configure (background='yellow')
  
     # set the title of GUI window
     root.title("registration form")
@@ -141,10 +141,10 @@ if __name__ == "__main__":
     excel()
  
     # create a Form label
-    heading = Label(root, text="Form", bg="purple")
+    heading = Label(root, text="Form", bg="pink")
  
     # create a Name label
-    name = Label(root, text="Name", bg="purple")
+    name = Label(root, text="Name", bg="pink")
  
     # create a Course label
     course = Label(root, text="Course", bg="purple")
