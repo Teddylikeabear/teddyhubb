@@ -8,6 +8,7 @@ from tkinter.messagebox import *
 #get the dialog box to open when required
 from tkinter.filedialog import *
 
+
 # Add controls(widget)
 
 self.__thisTextArea.grid(sticky = N + E + S + W)
