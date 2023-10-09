@@ -10,15 +10,15 @@ obj = Dog()
 
 class Dog:
 
-# ckass attribute 
-attr1 = "mammal"
+   # ckass attribute 
+   attr1 = "mammal"
 
-#instance attribute
-def __init__(self , name ):
-    self.name = name 
+   #instance attribute
+   def __init__(self , name ):
+       self.name = name 
     
- #driver code  
- #object instantiation
+#driver code  
+#object instantiation
 Bobby = Dog("Bobby")
 Snoppy = Dog("Snoppy")
 
@@ -31,3 +31,25 @@ print("My name is  {}".format(Bobby.name))
 print("My name is  {}".format(Snoppy.name))
 
     
+
+class Cat:
+ 
+    # class attribute
+    attr1 = "mammal"
+ 
+    # Instance attribute
+    def __init__(self, name):
+        self.name = name
+         
+    def speak(self):
+        print("My name is {}".format(self.name))
+ 
+# Driver code
+# Object instantiation
+Bowey = Cat("Bowey")
+Bow = Cat("Bow")
+ 
+# Accessing class methods
+Bowey.speak()
+Bow.speak()
+
