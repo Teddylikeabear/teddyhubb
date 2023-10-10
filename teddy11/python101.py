@@ -53,3 +53,20 @@ Bow = Cat("Bow")
 Bowey.speak()
 Bow.speak()
 
+# Python code to demonstrate how parent constructors
+# are called.
+ 
+# parent class
+
+class Person(object):
+    
+     # __init__ is known as the constructor
+     def __init__(self, name, idnumber):
+         self.name = name
+         self.idnumber = idnumber
+         
+     def display(self):
+         print(self.name)
+         print(self.idnumber)
+        
+             
