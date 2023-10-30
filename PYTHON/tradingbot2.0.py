@@ -57,7 +57,7 @@ def execute_order(symbol, quantity, action):
 
 # Calculate final portfolio value
 portfolio_value = current_balance + (position * data['Close'].iloc[-1])
-print(f'Final Portfolio Value: {portfolio_value}')
+print(f'Final Portfolio Value: {portfolio_value}');
 
 # Implement logging, error handling, and real-time monitoring.
 
