@@ -13,7 +13,7 @@ def login():
 
 @auth.route('/logout')
 def logout():
-      return "<p>Logout</p>"
+      return "<p>Logout!</p>"
 
 @auth.route('/sign_up',methods=['GET', 'POST'])
 def sign_up():
