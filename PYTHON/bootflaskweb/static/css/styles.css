@@ -1,0 +1,47 @@
+/* static/css/styles.css */
+
+/* Reset some default styles */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #343a40; /* Dark background color */
+}
+
+.navbar-brand {
+    color: #ffffff !important; /* White text color */
+}
+
+.navbar-nav .nav-link {
+    color: #ffffff !important; /* White text color */
+}
+
+/* Jumbotron Header */
+.jumbotron {
+    background-color: #343a40; /* Dark background color */
+    color: #ffffff; /* White text color */
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Content Area */
+.container {
+    margin-top: 2rem;
+}
+
+/* Footer */
+.footer {
+    background-color: #343a40; /* Dark background color */
+    color: #ffffff; /* White text color */
+    padding: 1rem 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
