@@ -12,7 +12,7 @@ body {
 
 /* Navigation Bar */
 .navbar {
-    background-color: #343a40; /* Dark background color */
+    background-color: rgb(137, 21, 127) ;
 }
 
 .navbar-brand {
@@ -25,7 +25,7 @@ body {
 
 /* Jumbotron Header */
 .jumbotron {
-    background-color: #343a40; /* Dark background color */
+    background-color: #f07bdc; /* Dark background color */
     color: #ffffff; /* White text color */
     padding: 2rem;
     margin-bottom: 2rem;
@@ -38,7 +38,7 @@ body {
 
 /* Footer */
 .footer {
-    background-color: #343a40; /* Dark background color */
+    background-color: #d63ea3; /* Dark background color */
     color: #ffffff; /* White text color */
     padding: 1rem 0;
     position: absolute;
