@@ -1,0 +1,32 @@
+<!-- templates/cart.html -->
+{% extends 'layout.html' %}
+
+{% block title %}Shopping Cart{% endblock %}
+
+{% block content %}
+<h1>Shopping Cart</h1>
+{% if cart %}
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Product</th>
+            <th scope="col">Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in cart %}
+        <tr>
+            <td>{{ item['name'] }}</td>
+            <td>${{ item['price'] }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<div class="text-right">
+    <p>Total Price: ${{ total_price }}</p>
+    <a href="{{ url_for('checkout') }}" class="btn btn-primary">Proceed to Checkout</a>
+</div>
+{% else %}
+<p>Your cart is empty.</p>
+{% endif %}
+{% endblock %}
