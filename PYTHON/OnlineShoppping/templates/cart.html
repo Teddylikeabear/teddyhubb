@@ -17,13 +17,13 @@
         {% for item in cart %}
         <tr>
             <td>{{ item['name'] }}</td>
-            <td>${{ item['price'] }}</td>
+            <td>R{{ item['price'] }}</td>
         </tr>
         {% endfor %}
     </tbody>
 </table>
 <div class="text-right">
-    <p>Total Price: ${{ total_price }}</p>
+    <p>Total Price: R{{ total_price }}</p>
     <a href="{{ url_for('checkout') }}" class="btn btn-primary">Proceed to Checkout</a>
 </div>
 {% else %}
