@@ -12,7 +12,17 @@ products = [
 
 @app.route('/')
 def home():
-    return render_template('home.html')
+    team_members = [
+        {'name': 'Thendo Charmaine Marageni', 'position': 'CEO', 'bio': ' FOUNDER'},
+        
+        
+    ]
+
+    milestones = [
+        {'year': '2020', 'event': 'Company founded', 'description': ' infinitt'},
+      
+    ]
+    return render_template('home.html' , team_members=team_members, milestones=milestones)
 
 @app.route('/products')
 def product_list():

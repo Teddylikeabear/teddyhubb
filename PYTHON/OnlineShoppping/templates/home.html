@@ -1,4 +1,4 @@
-<!-- templates/home.html -->
+<!-- templates/home.html 
 {% extends 'layout.html' %}
 
 {% block title %}Home{% endblock %}
@@ -7,3 +7,52 @@
 <h1>Welcome to INFINITT CLOTHING !</h1>
 <p>Explore our amazing products.</p>
 {% endblock %}
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>About Us</title>
+</head>
+<body>
+
+<div class="container mt-5">
+    <h1 class="mb-4">About Us</h1>
+
+    <!-- Team Members Section -->
+    <h2 class="mb-3">Our Team</h2>
+    <div class="row">
+        {% for member in team_members %}
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">{{ member.name }}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">{{ member.position }}</h6>
+                    <p class="card-text">{{ member.bio }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- Milestones Section -->
+    <h2 class="mb-3 mt-5">Milestones</h2>
+    <ul class="list-group">
+        {% for milestone in milestones %}
+        <li class="list-group-item">
+            <span class="font-weight-bold">{{ milestone.year }}</span> - {{ milestone.event }}: {{ milestone.description }}
+        </li>
+        {% endfor %}
+    </ul>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>
