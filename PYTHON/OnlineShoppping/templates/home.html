@@ -7,12 +7,38 @@
 <h1>Welcome to INFINITT CLOTHING !</h1>
 <p>Explore our amazing products.</p>
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            opacity: 0;
+            animation: fadeIn ease-in-out 1s;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .card {
+            transform: translateY(50px);
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .card:hover {
+            transform: translateY(0);
+        }
+    </style>
     <title>About Us</title>
 </head>
 <body>
@@ -54,7 +80,6 @@
 
 </body>
 </html>
-
 
 
 {% endblock %}
