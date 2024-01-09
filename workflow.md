@@ -7,3 +7,4 @@ date : 08/01/2024
 date : 09/01/2024
 (phython folder ,scrolltrigger folder )
 -created app.py 
+-created the index.html file 

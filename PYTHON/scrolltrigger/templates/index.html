@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en"
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <title>Home</title>
+
+
+
+</head>
+<body>
+
+<div class="container mt-5">
+    <h1 class="mb-4">Home page</h1>
+    <a href="#about" class="btn btn-primary"> Go to About page</a>
+</div>
+
+<div id="about" class="container mt-5">
+    <h1 class="mb-4">About us</h1>
+    <p>  The name of the brand is &infin;. It's an HTML representation of infinity😊. I believe that people don't just wear a brand but also wear the meaning behind the brand .  
+        And this is what the brand means to me :
+        As we know that infinity means endless, something that never ends . 
+        To me , it means life . The life we live is endless . Just because we die doesn't mean life itself ends , we tend to live for ourselves but what I believe is that life must be lived for other people. 
+        The life we live today shapes the life of the next generation meaning we do not live for  only ourselves but for other people also .
+        and also remember that our souls live forever , and there is no life without soul
+        Soul is infinite 
+        Life is infinite 
+        "life on earth may be finite but our souls are infinite "
+     </p>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+
+<script>
+
+//this is my scroll-triggered animation using scrollMagic and GSAP from  flask 
+
+var contoller = new ScrollMagic.Controller();
+
+var tween = gsap.from("#about", { opacity : 0, y: 50, duration: 1});
+
+var scene = new ScrollMagic.scene({
+    triggerElement: "#about" , 
+    triggerHook: "onEnter",
+})
+.setTween(tween)
+.addTo(conroller);
+
+</script>
+
+</body>
+</html>
