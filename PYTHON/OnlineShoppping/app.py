@@ -9,7 +9,7 @@ products = [
     {'id': 2, 'name': 'Product 2', 'price': 120.0, 'image': 'product2.jpg'},
     {'id': 3, 'name': 'Product 3', 'price': 700.0, 'image': 'product3.jpg'},
 ]
-
+'''
 cart = [
     {'name': 'Product 1', 'price': 10},
     {'name': 'Product 2', 'price': 15},
@@ -17,7 +17,7 @@ cart = [
 
 cart = [{'id': 1, 'name': 'Product 1', 'price': 10}, {'id': 2, 'name': 'Product 2', 'price': 20}]
 total_price = sum(item['price'] for item in cart)
-
+'''
 @app.route('/')
 def home():
     team_members = [
@@ -49,7 +49,7 @@ def view_cart():
     total_price = sum(item['price'] for item in cart)
     return render_template('cart.html', cart=cart, total_price=total_price)
 
-@app.route('/add_to_cart/<int:product_id>')
+@app.route('/add_to_cart/<int:product_id>', methods=['POST'])
 def add_to_cart(product_id):
     product = next((p for p in products if p['id'] == product_id), None)
     if product:
@@ -61,28 +61,22 @@ def add_to_cart(product_id):
 @app.route('/remove_from_cart/<int:product_id>', methods=['POST'])
 def remove_from_cart(product_id):
     # Logic to remove the product from the cart
-   
-    return redirect(url_for('cart'))
-
-@app.route('/add_to_cart/<int:product_id>', methods=['POST'])
-def add_to_cart(product_id):
-    # Logic to add more of the product to the cart
-
-    return redirect(url_for('cart'))
+   cart = session.get('cart', [])
+   cart = [item for item in cart if item['id'] != product_id]
+   session['cart'] = cart
+   return redirect(url_for('view_cart'))
 
 
-@app.route('/checkout')
+@app.route('/checkout',methods=['GET', 'POST'])
 def checkout():
     # Add order processing logic here
    # session.pop('cart', None)  # Clear the cart after checkout
    # return render_template('order.html')
-    
-    if request.method == 'POST':
-    
-        cart.clear()
-        return redirect(url_for('cart_page'))
+     if request.method == 'POST':
+        session.pop('cart', None) #this will clear cart after checkout
+        return redirect(url_for('view_cart'))
 
-    return render_template('checkout.html') 
+     return render_template('checkout.html')       
 
 if __name__ == '__main__':
     app.run(debug=True)
