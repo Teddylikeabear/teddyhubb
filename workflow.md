@@ -14,5 +14,6 @@ date : 11/01/2023
 -created app.py 
 -created the index.html file 
 -created the about.html file 
-
+-added a checkout page 
+-modfying my shopping cart
 
