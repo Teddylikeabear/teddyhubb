@@ -18,4 +18,5 @@ date : 11/01/2023
 -added a checkout page 
 -modfying my shopping cart
 -modifying app.py
+-fixing errors
 

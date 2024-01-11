@@ -9,15 +9,7 @@ products = [
     {'id': 2, 'name': 'Product 2', 'price': 120.0, 'image': 'product2.jpg'},
     {'id': 3, 'name': 'Product 3', 'price': 700.0, 'image': 'product3.jpg'},
 ]
-'''
-cart = [
-    {'name': 'Product 1', 'price': 10},
-    {'name': 'Product 2', 'price': 15},
-]
 
-cart = [{'id': 1, 'name': 'Product 1', 'price': 10}, {'id': 2, 'name': 'Product 2', 'price': 20}]
-total_price = sum(item['price'] for item in cart)
-'''
 @app.route('/')
 def home():
     team_members = [
@@ -69,9 +61,7 @@ def remove_from_cart(product_id):
 
 @app.route('/checkout',methods=['GET', 'POST'])
 def checkout():
-    # Add order processing logic here
-   # session.pop('cart', None)  # Clear the cart after checkout
-   # return render_template('order.html')
+
      if request.method == 'POST':
         session.pop('cart', None) #this will clear cart after checkout
         return redirect(url_for('view_cart'))
