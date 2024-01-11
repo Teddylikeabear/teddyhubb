@@ -17,4 +17,5 @@ date : 11/01/2023
 (python folder, online shopping project)
 -added a checkout page 
 -modfying my shopping cart
+-modifying app.py
 
