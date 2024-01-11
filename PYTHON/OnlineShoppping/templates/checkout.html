@@ -1,0 +1,21 @@
+<!-- templates/checkout.html -->
+{% extends 'layout.html' %}
+
+{% block title %}Checkout{% endblock %}
+
+{% block content %}
+  <h1>Checkout</h1>
+  <form method="post">
+    <!-- Adding a form fields for banking details (e.g., card number, expiration date, CVV)  will need to add more payment options -->
+    <label for="card_number">Card Number:</label>
+    <input type="text" id="card_number" name="card_number" required>
+
+    <label for="expiration_date">Expiration Date:</label>
+    <input type="text" id="expiration_date" name="expiration_date" required>
+
+    <label for="cvv">CVV:</label>
+    <input type="text" id="cvv" name="cvv" required>
+
+    <button type="submit" class="btn btn-primary">Submit Payment</button>
+  </form>
+{% endblock %}

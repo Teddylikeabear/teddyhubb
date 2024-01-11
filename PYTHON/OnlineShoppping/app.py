@@ -1,4 +1,4 @@
-from flask import Flask, render_template, session, redirect, url_for
+from flask import Flask, render_template, session, request, redirect, url_for
 
 app = Flask(__name__)
 app.secret_key = 'teddylikeabear'  # Change this to a secure random key
@@ -8,6 +8,11 @@ products = [
     {'id': 1, 'name': 'Product 1', 'price': 1500.0, 'image': 'product1.jpg'},
     {'id': 2, 'name': 'Product 2', 'price': 120.0, 'image': 'product2.jpg'},
     {'id': 3, 'name': 'Product 3', 'price': 700.0, 'image': 'product3.jpg'},
+]
+
+cart = [
+    {'name': 'Product 1', 'price': 10},
+    {'name': 'Product 2', 'price': 15},
 ]
 
 @app.route('/')
@@ -53,8 +58,15 @@ def add_to_cart(product_id):
 @app.route('/checkout')
 def checkout():
     # Add order processing logic here
-    session.pop('cart', None)  # Clear the cart after checkout
-    return render_template('order.html')
+   # session.pop('cart', None)  # Clear the cart after checkout
+   # return render_template('order.html')
+    
+    if request.method == 'POST':
+    
+        cart.clear()
+        return redirect(url_for('cart_page'))
+
+    return render_template('checkout.html') 
 
 if __name__ == '__main__':
     app.run(debug=True)

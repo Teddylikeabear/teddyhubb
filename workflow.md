@@ -9,9 +9,10 @@ date : 09/01/2024
 -created app.py 
 -created the index.html file 
 
-date : 10/01/2023
+date : 11/01/2023
 (phython folder , gateeffect folder )
 -created app.py 
 -created the index.html file 
 -created the about.html file 
+
 
