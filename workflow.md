@@ -23,4 +23,8 @@ date : 11/01/2024
 date :22/01/2024
 (python folder, online shopping project)
 -fixing errors
+(python folder , online shopping 2 project)
+-app.py ( adding all necessary file information and how they will work ) 
+-base.html
+-forms.py ( connecting forms to the database )
 
