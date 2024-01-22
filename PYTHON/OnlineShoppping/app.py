@@ -3,12 +3,15 @@ from flask import Flask, render_template, session, redirect, url_for
 app = Flask(__name__)
 app.secret_key = 'teddylikeabear'  # Change this to a secure random key
 
+
+
 # Sample product data (replace this with a database)
 products = [
     {'id': 1, 'name': 'Product 1', 'price': 1500.0, 'image': 'product1.jpg'},
     {'id': 2, 'name': 'Product 2', 'price': 120.0, 'image': 'product2.jpg'},
     {'id': 3, 'name': 'Product 3', 'price': 700.0, 'image': 'product3.jpg'},
 ]
+
 
 @app.route('/')
 def home():
@@ -51,11 +54,22 @@ def add_to_cart(product_id):
         session['cart'] = cart
     return redirect(url_for('product_list'))
 
-@app.route('/checkout')
+@app.route('/remove_from_cart/<int:product_id>', methods=['POST'])
+def remove_from_cart(product_id):
+    global cart
+    cart = [item for item in cart if item['id'] != product_id]
+    return redirect(url_for('view_cart'))
+
+
+@app.route('/checkout',methods=['GET','POST'])
 def checkout():
-    #will Add order processing logic here
-    session.pop('cart', None)  # Clear the cart after checkout
-    return render_template('order.html')
+    
+     if request.method == 'POST':
+
+        session.pop('cart', None) #this will clear cart after checkout
+        return redirect(url_for('view_cart'))
+
+     return render_template('checkout.html')       
 
 if __name__ == '__main__':
     app.run(debug=True)
