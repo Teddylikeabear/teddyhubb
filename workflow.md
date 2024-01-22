@@ -20,6 +20,7 @@ date : 11/01/2024
 -modifying app.py
 -fixing errors
 
-date : 12/01/2024
-
+date :22/01/2024
+(python folder, online shopping project)
+-fixing errors
 
