@@ -9,7 +9,7 @@ date : 09/01/2024
 -created app.py 
 -created the index.html file 
 
-date : 11/01/2023
+date : 11/01/2024
 (phython folder , gateeffect folder )
 -created app.py 
 -created the index.html file 
@@ -19,4 +19,7 @@ date : 11/01/2023
 -modfying my shopping cart
 -modifying app.py
 -fixing errors
+
+date : 12/01/2024
+
 

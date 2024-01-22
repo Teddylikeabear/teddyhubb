@@ -1,4 +1,4 @@
-from flask import Flask, render_template, session, request, url_for, redirect
+from flask import Flask, render_template, session, redirect, url_for
 
 app = Flask(__name__)
 app.secret_key = 'teddylikeabear'  # Change this to a secure random key
@@ -24,6 +24,7 @@ def home():
     ]
     return render_template('home.html' , team_members=team_members, milestones=milestones)
 
+
 @app.route('/products')
 def product_list():
     return render_template('products.html', products=products)
@@ -41,7 +42,7 @@ def view_cart():
     total_price = sum(item['price'] for item in cart)
     return render_template('cart.html', cart=cart, total_price=total_price)
 
-@app.route('/add_to_cart/<int:product_id>', methods=['POST'])
+@app.route('/add_to_cart/<int:product_id>')
 def add_to_cart(product_id):
     product = next((p for p in products if p['id'] == product_id), None)
     if product:
@@ -50,23 +51,11 @@ def add_to_cart(product_id):
         session['cart'] = cart
     return redirect(url_for('product_list'))
 
-@app.route('/remove_from_cart/<int:product_id>', methods=['POST'])
-def remove_from_cart(product_id):
-    # Logic to remove the product from the cart
-   cart = session.get('cart', [])
-   cart = [item for item in cart if item['id'] != product_id]
-   session['cart'] = cart
-   return redirect(url_for('view_cart'))
-
-
-@app.route('/checkout',methods=['GET', 'POST'])
+@app.route('/checkout')
 def checkout():
-
-     if request.method == 'POST':
-        session.pop('cart', None) #this will clear cart after checkout
-        return redirect(url_for('view_cart'))
-
-     return render_template('checkout.html')       
+    #will Add order processing logic here
+    session.pop('cart', None)  # Clear the cart after checkout
+    return render_template('order.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
