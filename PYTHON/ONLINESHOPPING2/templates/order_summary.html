@@ -1,0 +1,38 @@
+<!-- templates/order_summary.html -->
+
+{% extends 'base.html' %}
+
+{% block title %}Order Summary{% endblock %}
+
+{% block content %}
+    <h2>Order Summary</h2>
+
+    {% if cart_items %}
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Product</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in cart_items %}
+                    <tr>
+                        <td>{{ item.product.name }}</td>
+                        <td>${{ item.product.price }}</td>
+                        <td>{{ item.quantity }}</td>
+                        <td>${{ item.product.price * item.quantity }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <p class="text-right">Total Price: ${{ total_price }}</p>
+
+        <a href="{{ url_for('place_order') }}" class="btn btn-success">Place Order</a>
+    {% else %}
+        <p>Your cart is empty.</p>
+    {% endif %}
+{% endblock %}
