@@ -35,4 +35,6 @@ Date : 24/01/2022
 -set up virtual environment to get my flast_wtf to work 
 -setting up my flask_sqlalchemy
 -downloading necessary modules to support flask_sqlalchemy
+-updated product_list, an product_detail files 
+
 
