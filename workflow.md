@@ -41,3 +41,4 @@ Date : 24/01/2022
 -flask_login running
 -fixing mysqldb 
 -trying to connect my database to python and get sql working inorder to run the code 
+-working on my report while dowloading mysqldb modules 
