@@ -40,3 +40,4 @@ Date : 24/01/2022
 -flask_sqlalchemy running 
 -flask_login running
 -fixing mysqldb 
+-trying to connect my database to python and get sql working inorder to run the code 
