@@ -39,3 +39,4 @@ Date : 24/01/2022
 -finished downloading flask modules 
 -flask_sqlalchemy running 
 -flask_login running
+-fixing mysqldb 
