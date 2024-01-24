@@ -28,3 +28,6 @@ date :22/01/2024
 -base.html
 -forms.py ( connecting forms to the database )
 
+Date : 24/01/2022
+(python folder , online shopping 2 project)
+- fixing database for forms.py to work
