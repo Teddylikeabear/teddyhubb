@@ -1,15 +1,18 @@
 # app.py
 
 from flask import Flask, render_template, redirect, url_for, flash
-from flask_sqlalchemy import SQLAlchemy
-from flask_login import LoginManager, UserMixin, login_user, login_required, current_user, logout_user
+from flask_login import LoginManager, login_user, login_required, current_user, logout_user
+from flask_login import LoginManager
+from db import db
 from forms import LoginForm
 from models import User, Product, Cart, Order
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'teddylikeabear'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://teddyhubb:teddylikeabear@localhost/onlineshopping2'
-db = SQLAlchemy(app)
+
+db.init_app(app)  # Initializing  database
+
 login_manager = LoginManager(app)
 login_manager.login_view = 'login'
 
@@ -43,6 +46,7 @@ def login():
 @login_required
 def logout():
     logout_user()
+    flash('Logout successful!', 'success')
     return redirect(url_for('home'))
 
 
