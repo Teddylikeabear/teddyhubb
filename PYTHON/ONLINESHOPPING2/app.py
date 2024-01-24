@@ -8,7 +8,7 @@ from models import User, Product, Cart, Order
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'teddylikeabear'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://your_username:your_password@localhost/onlineshopping'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://teddyhubb:teddylikeabear@localhost/onlineshopping2'
 db = SQLAlchemy(app)
 login_manager = LoginManager(app)
 login_manager.login_view = 'login'
