@@ -31,3 +31,7 @@ date :22/01/2024
 Date : 24/01/2022
 (python folder , online shopping 2 project)
 - fixing database for forms.py to work
+
+-created flask-wtf folder to import its modules and see if  it works 
+-set up virtual environment to get my flast_wtf to work 
+
