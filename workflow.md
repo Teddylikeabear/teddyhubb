@@ -36,5 +36,6 @@ Date : 24/01/2022
 -setting up my flask_sqlalchemy
 -downloading necessary modules to support flask_sqlalchemy
 -updated product_list, an product_detail files 
-
-
+-finished downloading flask modules 
+-flask_sqlalchemy running 
+-flask_login running
