@@ -9,7 +9,7 @@ from models import User, Product, Cart, Order
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'teddylikeabear'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://teddyhubb:teddylikeabear@localhost/teddyhub'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://teddyhubb:teddylikeabear@localhost/teddyhubb'
 
 db.init_app(app)  # Initializing  database
 
