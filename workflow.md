@@ -50,3 +50,5 @@ date : 25/01/2024
 -learning different ways to connect to database 
 (mysqldatabase.py under python folder )
 (postgreSql.py under python folder)
+-tring to get mysqlclient to work with my python , which is requiring me to downgrade to a lower python version 
+-learning connecting my SQL with Python 
