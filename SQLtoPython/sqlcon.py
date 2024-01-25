@@ -10,3 +10,4 @@ mydb = mysql.connector.connect(
 
 # Printing the connection object 
 print(mydb)
+
