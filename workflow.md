@@ -53,3 +53,6 @@ date : 25/01/2024
 -tring to get mysqlclient to work with my python , which is requiring me to downgrade to a lower python version 
 -learning connecting my SQL with Python 
 -created SQLtoPython folder for all connection files 
+-using cursor
+-creating a table
+-showing table
