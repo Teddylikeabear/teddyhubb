@@ -47,3 +47,5 @@ Date : 24/01/2024
 date : 25/01/2024
 (python folder , online shopping 2 project)
 -downloading mysqlbd modules 
+-learning different ways to connect to database 
+(mysqldatabaase.py under python folder )
