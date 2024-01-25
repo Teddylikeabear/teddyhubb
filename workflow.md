@@ -28,7 +28,7 @@ date :22/01/2024
 -base.html
 -forms.py ( connecting forms to the database )
 
-Date : 24/01/2022
+Date : 24/01/2024
 (python folder , online shopping 2 project)
 - fixing database for forms.py to work
 -created flask-wtf folder to import its modules and see if  it works 
@@ -42,3 +42,8 @@ Date : 24/01/2022
 -fixing mysqldb 
 -trying to connect my database to python and get sql working inorder to run the code 
 -working on my report while dowloading mysqldb modules 
+
+
+date : 25/01/2024
+(python folder , online shopping 2 project)
+-downloading mysqlbd modules 
