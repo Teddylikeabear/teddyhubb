@@ -58,8 +58,11 @@ date : 25/01/2024
 -showing table
 
 date : 26/01/2024
+(python folder , SQLtoPYTHON folder)
 -connecting and running SQL queries to postgreSQL database from python 
 -installing postgreSQL
 -creating database with postgreSQL
 -connect MySQL database using MySQL-connector 
--creating database with mySQLconnector 
+-creating database with mySQLconnector
+(python folder , mysqlconnectorform project) 
+-creating a form page that uses mysqlconnector 
