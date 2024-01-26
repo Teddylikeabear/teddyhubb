@@ -68,3 +68,4 @@ date : 26/01/2024
 -creating a form page that uses mysqlconnector 
 -using javascript for password validation
 -validating password using python instead of javascript
+-added a user.html page that displays all the users that submit information

@@ -10,6 +10,17 @@
 
 <div class="container mt-5">
     <h2>Submit Form</h2>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="alert alert-danger">
+                    <ul>
+                        {% for message in messages %}
+                            <li>{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+        {% endwith %}
     <form method="post" action="/submit">
         <div class="form-group">
             <label for="name"> First Name:</label>
@@ -45,13 +56,15 @@
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
+<a href="/users" class="btn btn-info mt-3">View User List</a>
+</form>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-<!----
+
 <script>
     function validateForm() {
         // Basic client-side validation
@@ -66,25 +79,6 @@
         return true;
     }
 </script>
------>
-
-<div class="container mt-5">
-    <h2>Submit Form</h2>
-    {% with messages = get_flashed_messages() %}
-        {% if messages %}
-            <div class="alert alert-danger">
-                <ul>
-                    {% for message in messages %}
-                        <li>{{ message }}</li>
-                    {% endfor %}
-                </ul>
-            </div>
-        {% endif %}
-    {% endwith %}
-    <form method="post" action="/submit">
-        
-    </form>
-</div>
 
 </body>
 </html>
