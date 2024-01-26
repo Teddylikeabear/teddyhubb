@@ -66,3 +66,4 @@ date : 26/01/2024
 -creating database with mySQLconnector
 (python folder , mysqlconnectorform project) 
 -creating a form page that uses mysqlconnector 
+-using javascript for password validation
