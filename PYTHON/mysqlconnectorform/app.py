@@ -5,8 +5,8 @@ app = Flask(__name__)
 
 # Replace these with your MySQL database credentials
 db_config = {
-    'host': 'your_database_host',
-    'user': 'root@localhost',
+    'host': 'localhost',
+    'user': 'root',
     'password': 'teddylikeabear',
     'database': 'teddyhubb',
 }
