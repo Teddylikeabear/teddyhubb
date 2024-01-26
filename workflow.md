@@ -56,3 +56,7 @@ date : 25/01/2024
 -using cursor
 -creating a table
 -showing table
+
+date : 26/01/2024
+-connecting and running SQL queries to postgreSQL database from python 
+-installing postgreSQL
