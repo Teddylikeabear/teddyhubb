@@ -60,3 +60,6 @@ date : 25/01/2024
 date : 26/01/2024
 -connecting and running SQL queries to postgreSQL database from python 
 -installing postgreSQL
+-creating database with postgreSQL
+-connect MySQL database using MySQL-connector 
+-creating database with mySQLconnector 
