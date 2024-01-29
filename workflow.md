@@ -69,3 +69,6 @@ date : 26/01/2024
 -using javascript for password validation
 -validating password using python instead of javascript
 -added a user.html page that displays all the users that submit information
+
+date : 29/01/2024
+-redownloading a lower python version to support mySQL
