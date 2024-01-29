@@ -74,3 +74,4 @@ date : 29/01/2024
 -redownloading a lower python version to support mySQL
 (Python folder , SQLtoPython folder)
 -create a new database in the createdatabasse.sql file 
+-myphpadmin file ( created a database called teddyhubb)
