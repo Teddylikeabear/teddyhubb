@@ -73,5 +73,8 @@ date : 26/01/2024
 date : 29/01/2024
 -redownloading a lower python version to support mySQL
 (Python folder , SQLtoPython folder)
--create a new database in the createdatabasse.sql file 
+-create a new database in the createdatabasse.sql 
+-created a test_mysql.py file to test the database i just created 
+-created other database examples 
 -myphpadmin file ( created a database called teddyhubb)
+-created a new onlineshoppingfolder ( which lets the user login or register before accessing the online shopping platform )
