@@ -16,8 +16,13 @@ class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(20), unique=True, nullable=False)
     password = db.Column(db.String(60), nullable=False)
-    email = db.Column(db.String(120), unique=True, nullable=False)
 
+class Product(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(100), nullable=False)
+    description = db.Column(db.Text, nullable=True)
+    price = db.Column(db.Float, nullable=False)    
+    
 
 @login_manager.user_loader
 def load_user(user_id):
@@ -65,7 +70,7 @@ def register():
     if request.method == 'POST':
         new_username = request.form['new_username']
         new_password = request.form['new_password']
-        new_email = request.form['new_email']
+        
 
         existing_user = User.query.filter_by(username=new_username).first()
 
@@ -84,6 +89,11 @@ def register():
 @login_required
 def about():
     return render_template('about.html')
+
+@app.route('/view_products')
+def view_products():
+    products = Product.query.all()
+    return render_template('view_products.html', products=products)
 
 
 if __name__ == '__main__':
