@@ -81,3 +81,5 @@ date : 29/01/2024
 
 date : 30/01/2024
 -Having a meeting with interns , and all the things we will do today are on the intern folder
+-trying to validate user name 
+-created a usernotfound page but seems like i will change it to just a pop up message 

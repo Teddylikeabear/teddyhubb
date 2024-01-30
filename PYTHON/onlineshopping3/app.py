@@ -39,9 +39,9 @@ def login():
         if user and user.password == password:
             login_user(user)
             flash('Login successful!', 'success')
-            return redirect(url_for('dashboard'))
+            return redirect(url_for('about'))
         else:
-            flash('Login failed. Please check your username and password.', 'danger')
+            flash('Invalid username or password. Please try again.', 'danger')
 
     return render_template('login.html')
 
@@ -74,7 +74,7 @@ def register():
             db.session.add(new_user)
             db.session.commit()
             flash('Account created successfully! You can now log in.', 'success')
-            return redirect(url_for('login'))
+            return redirect(url_for('about'))
 
     return render_template('register.html')
 
@@ -83,6 +83,9 @@ def register():
 def about():
     return render_template('about.html')
 
+@app.route('/user_not_found')
+def user_not_found():
+    return render_template('user_not_found.html')
 
 if __name__ == '__main__':
     with app.app_context():
