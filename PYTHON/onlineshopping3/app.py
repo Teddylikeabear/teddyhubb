@@ -16,6 +16,7 @@ class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(20), unique=True, nullable=False)
     password = db.Column(db.String(60), nullable=False)
+    email = db.Column(db.String(120), unique=True, nullable=False)
 
 
 @login_manager.user_loader
@@ -64,6 +65,7 @@ def register():
     if request.method == 'POST':
         new_username = request.form['new_username']
         new_password = request.form['new_password']
+        new_email = request.form['new_email']
 
         existing_user = User.query.filter_by(username=new_username).first()
 
@@ -83,11 +85,11 @@ def register():
 def about():
     return render_template('about.html')
 
-@app.route('/user_not_found')
-def user_not_found():
-    return render_template('user_not_found.html')
 
 if __name__ == '__main__':
     with app.app_context():
         db.create_all()
     app.run(debug=True)
+
+
+
