@@ -86,3 +86,4 @@ date : 30/01/2024
 -decided to use a flash message for my user validation 
 -designing my about page dor the website 
 -modifying the user model to include additional fiels for storing relevant information 
+-added view products template
