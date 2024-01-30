@@ -78,3 +78,6 @@ date : 29/01/2024
 -created other database examples 
 -myphpadmin file ( created a database called teddyhubb)
 -created a new onlineshoppingfolder ( which lets the user login or register before accessing the online shopping platform )
+
+date : 30/01/2024
+-Having a meeting with interns , and all the things we will do today are on the intern folder
