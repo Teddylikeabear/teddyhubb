@@ -87,3 +87,7 @@ date : 30/01/2024
 -designing my about page dor the website 
 -modifying the user model to include additional fiels for storing relevant information 
 -added view products template
+
+date : 31/01/2024
+( UML DIAGRAM FOLDER )
+-onlineshopping use case diagram 
