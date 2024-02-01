@@ -96,3 +96,5 @@ date : 01/02/2024
 (Python folder, onlineshopping3 folder)
 -adding functional buttons on about.html file 
 -updating app.py file to get buttons to be functional
+-updated the cart file 
+-updated app.py to add and delete things from cart 

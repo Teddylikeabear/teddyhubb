@@ -22,6 +22,14 @@ class Product(db.Model):
     name = db.Column(db.String(100), nullable=False)
     description = db.Column(db.Text, nullable=True)
     price = db.Column(db.Float, nullable=False)    
+
+class CartItem(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    product_id = db.Column(db.Integer, db.ForeignKey('product.id'), nullable=False)
+    quantity = db.Column(db.Integer, nullable=False)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+    product = db.relationship('Product', backref='cart_items')
+    user = db.relationship('User', backref='cart_items')   
     
 
 @login_manager.user_loader
@@ -92,24 +100,45 @@ def about():
 
 @app.route('/view_products')
 def view_products():
-    
-    products = get_products()
+
+    products = Product.query.all()
     return render_template('view_products.html', products=products)
 
 @app.route('/cart')
 def cart():
+    cart_items = CartItem.query.filter_by(user_id=current_user.id).all()
     
-    return render_template('cart.html')
+    return render_template('cart.html', cart_items=cart_items)
+
+@app.route('/update_quantity/<int:item_id>', methods=['POST'])
+@login_required
+def update_quantity(item_id):
+    item = CartItem.query.get_or_404(item_id)
+    new_quantity = int(request.form['quantity'])
+
+    # Ensure the new quantity is valid (greater than 0)
+    if new_quantity > 0:
+        item.quantity = new_quantity
+        db.session.commit()
+        flash('Quantity updated successfully!', 'success')
+    else:
+        flash('Invalid quantity. Please enter a value greater than 0.', 'danger')
+
+    return redirect(url_for('cart'))
+
+@app.route('/delete_from_cart/<int:item_id>', methods=['POST'])
+@login_required
+def delete_from_cart(item_id):
+    item = CartItem.query.get_or_404(item_id)
+    db.session.delete(item)
+    db.session.commit()
+    flash('Item removed from the cart successfully!', 'success')
+    return redirect(url_for('cart'))
 
 @app.route('/account_settings')
 def account_settings():
     
     return render_template('account_settings.html')
-
-@app.route('/logout')
-def logout():
-   
-    return render_template('logout.html')
 
 
 if __name__ == '__main__':
