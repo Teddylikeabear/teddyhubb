@@ -91,3 +91,8 @@ date : 30/01/2024
 date : 31/01/2024
 ( UML DIAGRAM FOLDER )
 -onlineshopping use case diagram 
+
+date : 01/02/2024
+(Python folder, onlineshopping3 folder)
+-adding functional buttons on about.html file 
+-updating app.py file to get buttons to be functional

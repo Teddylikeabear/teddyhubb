@@ -92,8 +92,24 @@ def about():
 
 @app.route('/view_products')
 def view_products():
-    products = Product.query.all()
+    
+    products = get_products()
     return render_template('view_products.html', products=products)
+
+@app.route('/cart')
+def cart():
+    
+    return render_template('cart.html')
+
+@app.route('/account_settings')
+def account_settings():
+    
+    return render_template('account_settings.html')
+
+@app.route('/logout')
+def logout():
+   
+    return render_template('logout.html')
 
 
 if __name__ == '__main__':
