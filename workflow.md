@@ -109,4 +109,4 @@ date : 05/02/2024
 (interns folder , php file)
 -doing php with interns , Introduction to PHP and Server-Side Scripting
 (python folder , onlineshopping 3)
--continuing with errors for my app.py 
+-continuing with fixing errors for my app.py 
