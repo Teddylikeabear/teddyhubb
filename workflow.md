@@ -103,3 +103,5 @@ date : 05/02/2024
 -update app.py folder 
 -account settings page 
 -signout page 
+- my idea for this project is to create a website that will allow suppliers to sell their products on this website. 
+- this is why i have created necessary supplier classes and their routes 
