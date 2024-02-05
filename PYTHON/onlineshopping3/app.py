@@ -59,13 +59,13 @@ def login():
 
     return render_template('login.html')
 
-
+"""
 @app.route('/logout')
 @login_required
 def logout():
     logout_user()
     return redirect(url_for('index'))
-
+"""
 
 @app.route('/dashboard')
 @login_required
@@ -140,6 +140,25 @@ def account_settings():
     
     return render_template('account_settings.html')
 
+@app.route('/update_account_settings', methods=['POST'])
+@login_required
+def update_account_settings():
+    new_username = request.form['new_username']
+    new_password = request.form['new_password']
+
+    current_user.username = new_username
+    current_user.password = new_password
+
+    db.session.commit()
+    flash('Account settings updated successfully!', 'success')
+
+    return redirect(url_for('account_settings'))
+
+@app.route('/signout')
+@login_required
+def signout():
+    logout_user()
+    return render_template('signout.html')
 
 if __name__ == '__main__':
     with app.app_context():

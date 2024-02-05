@@ -98,3 +98,8 @@ date : 01/02/2024
 -updating app.py file to get buttons to be functional
 -updated the cart file 
 -updated app.py to add and delete things from cart 
+
+date : 05/02/2024
+-update app.py folder 
+-account settings page 
+-signout page 
