@@ -100,8 +100,13 @@ date : 01/02/2024
 -updated app.py to add and delete things from cart 
 
 date : 05/02/2024
--update app.py folder 
--account settings page 
--signout page 
+(python folder , onlineshopping 3)
+- update app.py folder 
+- account settings page 
+- signout page 
 - my idea for this project is to create a website that will allow suppliers to sell their products on this website. 
 - this is why i have created necessary supplier classes and their routes 
+(interns folder , php file)
+-doing php with interns , Introduction to PHP and Server-Side Scripting
+(python folder , onlineshopping 3)
+-continuing with errors for my app.py 
