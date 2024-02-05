@@ -4,7 +4,7 @@ from flask_login import LoginManager, UserMixin, login_user, login_required, log
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField
 from wtforms.validators import DataRequired
-from wtforms.fields.simple import DecimalField
+from wtforms.fields import DecimalField
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
@@ -39,7 +39,7 @@ class CartItem(db.Model):
 class Supplier(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(20), unique=True, nullable=False)
-    password = db.Column(db.String(60), nullable=False)
+    password = db.Column(db.String(60), nullable=False) 
 
 class SupplierRegistrationForm(FlaskForm):
     username = StringField('Username', validators=[DataRequired()])
@@ -55,8 +55,7 @@ class ProductForm(FlaskForm):
     name = StringField('Product Name', validators=[DataRequired()])
     description = StringField('Product Description')
     price = DecimalField('Product Price', validators=[DataRequired()])
-    submit = SubmitField('Add Product')    
-
+    submit = SubmitField('Add Product') 
 
 @login_manager.user_loader
 def load_user(user_id):

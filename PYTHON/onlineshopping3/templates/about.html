@@ -55,10 +55,22 @@
 
                        
                         <div class="text-center mt-4">
+                            {% if current_user.is_authenticated %}
+                            {% if current_user.is_supplier %}
+                                <!-- Supplier-Specific Content -->
+                                <p>As a supplier, you have additional features and options.</p>
+                                <a href="{{ url_for('supplier_dashboard') }}" class="btn btn-secondary mx-2">Supplier Dashboard</a>
+                            {% else %}
                             <a href="/view_products" class="btn btn-primary mx-2">View Products</a>
                             <a href="/cart" class="btn btn-success mx-2">My Cart</a>
                             <a href="account_settings" class="btn btn-info mx-2">Account Settings</a>
+                            {% endif %}
                             <a href="/logout" class="btn btn-danger mx-2">Logout</a>
+                            {% else %}
+                                <!-- Not Logged In - Add Login/Register Links -->
+                                <a href="/login" class="btn btn-primary mx-2">Login</a>
+                                <a href="/register" class="btn btn-secondary mx-2">Register</a>
+                            {% endif %}
                     </div>
                 </div>
             </div>

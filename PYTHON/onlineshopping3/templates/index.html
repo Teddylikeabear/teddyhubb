@@ -9,7 +9,11 @@
 <body class="bg-light">
     <div class="container mt-5">
         <h1 class="text-center">Welcome to INFINITT Online Shopping Website</h1>
-        <p class="text-center"><a href="{{ url_for('login') }}" class="btn btn-primary">Login</a> to view products.</p>
+        <p class="text-center">
+            <a href="{{ url_for('login') }}" class="btn btn-primary mx-2">Login</a>
+            <a href="{{ url_for('register') }}" class="btn btn-success mx-2">Register</a>
+            <a href="{{ url_for('login_supplier') }}" class="btn btn-info mx-2">Supplier Login</a>
+        </p>
     </div>
 </body>
 </html>

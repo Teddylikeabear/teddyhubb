@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}Register as Supplier{% endblock %}
+
+{% block content %}
+    <h2>Register as Supplier</h2>
+    <form method="post" action="{{ url_for('register_supplier') }}">
+        {{ form.hidden_tag() }}
+        <div class="mb-3">
+            {{ form.username.label(class="form-label") }}
+            {{ form.username(class="form-control", placeholder="Enter your username") }}
+        </div>
+        <div class="mb-3">
+            {{ form.password.label(class="form-label") }}
+            {{ form.password(class="form-control", placeholder="Enter your password") }}
+        </div>
+        <!-- Add other form fields as needed -->
+        <button type="submit" class="btn btn-primary">Register</button>
+    </form>
+    <p class="mt-3">Already have an account? <a href="{{ url_for('login_supplier') }}">Log in</a></p>
+{% endblock %}

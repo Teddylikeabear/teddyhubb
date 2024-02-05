@@ -110,3 +110,4 @@ date : 05/02/2024
 -doing php with interns , Introduction to PHP and Server-Side Scripting
 (python folder , onlineshopping 3)
 -continuing with fixing errors for my app.py 
+-trying to include supplier login informtion 
