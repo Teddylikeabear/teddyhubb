@@ -1,21 +1,43 @@
-{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="text-center">Register Supplier</h2>
+                    </div>
+                    <div class="card-body">
+                        <!-- Registration Form -->
+                        <form method="post" action="{{ url_for('register_supplier') }}">
+                            <div class="form-group">
+                                <label for="new_username">New Username:</label>
+                                <input type="text" id="new_username" name="new_username" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="new_password">New Password:</label>
+                                <input type="password" id="new_password" name="new_password" class="form-control" required>
+                            </div>
+                            <button type="submit" class="btn btn-success btn-block">Create Account</button>
+                        </form>
 
-{% block title %}Register as Supplier{% endblock %}
+                        <hr>
 
-{% block content %}
-    <h2>Register as Supplier</h2>
-    <form method="post" action="{{ url_for('register_supplier') }}">
-        {{ form.hidden_tag() }}
-        <div class="mb-3">
-            {{ form.username.label(class="form-label") }}
-            {{ form.username(class="form-control", placeholder="Enter your username") }}
+                        <!-- Login Link -->
+                        <p class="text-center">
+                            <a href="{{ url_for('login_supplier') }}">Already have an account? Log in here.</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="mb-3">
-            {{ form.password.label(class="form-label") }}
-            {{ form.password(class="form-control", placeholder="Enter your password") }}
-        </div>
-        <!-- Add other form fields as needed -->
-        <button type="submit" class="btn btn-primary">Register</button>
-    </form>
-    <p class="mt-3">Already have an account? <a href="{{ url_for('login_supplier') }}">Log in</a></p>
-{% endblock %}
+    </div>
+</body>
+</html>

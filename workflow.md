@@ -111,3 +111,6 @@ date : 05/02/2024
 (python folder , onlineshopping 3)
 -continuing with fixing errors for my app.py 
 -trying to include supplier login informtion 
+
+date : 07/02/2024
+- creating a connection for supplier
