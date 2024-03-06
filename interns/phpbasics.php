@@ -50,8 +50,8 @@ $matrix = array ( array(1,2,3), array(4,5,6));
 //connecting to your database 
 
 $servername = "localhost";
-$username = "root"
-$password = "";
+$username = "root";
+$password = " ";
 $database = "teddyhubb";
 
 $conn = new mysqli($servername, $username , $password ,$database );

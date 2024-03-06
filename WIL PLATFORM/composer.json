@@ -1,0 +1,21 @@
+{
+    "name": "wil/platform",
+    "description": "work itergrated learning platform",
+    "type": "composer-plugin",
+    "license": "proprietary license",
+    "autoload": {
+        "psr-4": {
+            "Wil\\Platform\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Teddylikeabear",
+            "email": "nyatshiisana@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^8.0"
+    }
+}
